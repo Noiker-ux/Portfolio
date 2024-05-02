@@ -1,0 +1,14 @@
+.card {
+	max-width: 380px;
+	height: 425px;
+	background-color: var(--white-color);
+	padding: 10px 15px;
+	color: var(--black-color);
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.dateNumber {
+	font-size: 250px;
+}
