@@ -1,9 +1,10 @@
-import { MediumCard } from '@/components/MediumCard/MediumCard';
+import { NewsList } from '@/components/NewsList/NewsList';
+import style from './page.module.css';
 
 export default function MainPage({}) {
 	return (
-		<div>
-			<MediumCard />
+		<div className={style.blog}>
+			<NewsList />
 		</div>
 	);
 }

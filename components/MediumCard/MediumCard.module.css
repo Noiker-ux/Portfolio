@@ -4,11 +4,122 @@
 	background-color: var(--white-color);
 	padding: 10px 15px;
 	color: var(--black-color);
+	position: relative;
 }
+
+.light {
+	background-color: var(--white-color);
+	color: var(--black-color);
+}
+
+.dark {
+	background-color: var(--black-color);
+	color: var(--white-color);
+}
+.dark > .header {
+	border-bottom: 3px solid var(--white-color);
+}
+.dark > .body > .more > .plus {
+	background-color: var(--white-color);
+}
+.dark > .body > .more > .plus::after,
+.dark > .body > .more > .plus::before {
+	background-color: var(--black-color);
+}
+.dark > .header > .header__info > .yearMonth,
+.dark > .body > .anons {
+	color: var(--white-light);
+}
+
+.dark > .body > .more > .detail,
+.dark > .body {
+	color: var(--white-color);
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 15px;
+	border-bottom: 3px solid var(--black-color);
 }
-.dateNumber {
+
+.header__info {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.tag {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.date {
 	font-size: 250px;
+	line-height: 210px;
+}
+
+.yearMonth,
+.anons {
+	color: var(--gray-color);
+	font-family: SuisseIntl;
+	font-weight: 100;
+	font-style: normal;
+}
+.anons {
+	font-size: 16px;
+	margin-top: 6px;
+}
+.yearMonth {
+	font-size: 14px;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 32px;
+}
+
+.plus {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	background-color: var(--black-color);
+}
+
+.plus::after {
+	content: '';
+	position: absolute;
+	left: 7.5px;
+	top: calc(50% - 1px);
+	width: 15px;
+	height: 1px;
+	background-color: var(--white-color);
+}
+
+.plus::before {
+	content: '';
+	position: absolute;
+	left: calc(50% - 1px);
+	top: 7.5px;
+	width: 1px;
+	height: 15px;
+	background-color: var(--white-color);
+}
+
+.more {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	bottom: 15px;
+	padding-right: 30px;
+}
+
+.detail {
+	color: var(--black-color);
+	font-size: 24px;
 }

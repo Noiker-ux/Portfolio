@@ -1,6 +1,9 @@
 :root {
-	--black-color: #000000;
-	--white-color: #ffffff;
+	--black-color: #212020;
+	--white-color: #f0f0f0;
+	--white-light: #edebeb;
+	--gray-color: #616161;
+
 	--container-width: 1230px;
 }
 
@@ -10,9 +13,37 @@
 }
 
 body {
-	background-color: var(--black-color);
+	background-color: #848383;
 	color: var(--white-color);
+	font-family: 'DrukCyr';
+	font-weight: normal;
+	font-size: 18px;
 }
-.fontFamily {
-	font-family: 'Anton', sans-serif;
+
+@font-face {
+	font-family: DrukCyr;
+	src: url('../fonts/DrukCyr/DrukCyr-Medium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: DrukCyr;
+	src: url('../fonts/DrukCyr/DrukCyr-Super.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: SuisseIntl;
+	src: url('../fonts/SuisseIntl/SuisseIntl-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: SuisseIntl;
+	src: url('../fonts/SuisseIntl/SuisseIntl-Light.otf');
+	font-weight: 100;
+	font-style: normal;
 }

@@ -1,15 +1,7 @@
 import type { Metadata } from 'next';
-import { Bebas_Neue } from 'next/font/google';
 import './reset.css';
 import './globals.css';
 import { Header } from '@/components/Header/Header';
-
-const bebas = Bebas_Neue({
-	weight: ['400'],
-	style: ['normal'],
-	subsets: ['latin'],
-	display: 'swap',
-});
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -23,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={bebas.className}>
+			<body>
 				<div className={'container'}>
 					<Header />
 					{children}
