@@ -1,26 +1,23 @@
 import Link from 'next/link';
 import style from './BeforeAfterMenu.module.css';
+import IBeforeAfterMenuProps from './BeforeAfterMenu.props';
+import classNames from 'classnames';
+import IBeforeAfterMenuItem from '@/data/BeforeAfterMenu';
 
-export const BeforeAfterMenu = () => {
+export const BeforeAfterMenu = ({
+	menuData,
+	className,
+	...props
+}: IBeforeAfterMenuProps) => {
 	return (
-		<div className={style.menu}>
-			<ul>
+		<ul className={classNames(style.menu, className)} {...props}>
+			{menuData.map((menuItem: IBeforeAfterMenuItem) => (
 				<li>
-					<Link className={style.link} href={'#'}>
-						About
+					<Link className={style.link} href={menuItem.link}>
+						{menuItem.label}
 					</Link>
 				</li>
-				<li>
-					<Link className={style.link} href={'#'}>
-						Stack
-					</Link>
-				</li>
-				<li>
-					<Link className={style.link} href={'#'}>
-						Projects
-					</Link>
-				</li>
-			</ul>
-		</div>
+			))}
+		</ul>
 	);
 };

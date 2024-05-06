@@ -1,3 +1,8 @@
 .link {
 	color: var(--white-color);
 }
+
+.menu {
+	display: flex;
+	gap: 30px;
+}
