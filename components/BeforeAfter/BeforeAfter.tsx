@@ -16,6 +16,7 @@ export const BeforeAfter = () => {
 
 	return (
 		<div className={style.wrapper}>
+			{/* start before */}
 			<div
 				className={classNames(style.before, {
 					[style.closeBefore]: before === 0,
@@ -24,20 +25,30 @@ export const BeforeAfter = () => {
 					className={classNames(style.beforeContent, {
 						[style.beforeActive]: before === 100,
 					})}>
-					<BeforeAfterMenu menuData={BeforeMenu} />
-					<button
-						className={style.buttonBefore}
-						onClick={() => {
-							if (before <= 50) {
-								dispatch(percentAfterBeforeActions.setPercents(100));
-							} else {
-								dispatch(percentAfterBeforeActions.setPercents(50));
-							}
-						}}>
-						Front
-					</button>
+					{/* before header start */}
+					<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+						<BeforeAfterMenu menuData={BeforeMenu} />
+						<button
+							className={style.buttonBefore}
+							onClick={() => {
+								if (before <= 50) {
+									dispatch(percentAfterBeforeActions.setPercents(100));
+								} else {
+									dispatch(percentAfterBeforeActions.setPercents(50));
+								}
+							}}>
+							Front
+						</button>
+					</div>
+					{/* before header end */}
+					{/* before body start */}
+					<div className={style.beforeBody}></div>
+					{/* before body end */}
 				</div>
 			</div>
+			{/* end before */}
+			<img className={style.gargona1} src='gargona.png' alt='' />
+			{/* start after */}
 			<div
 				className={classNames(style.after, {
 					[style.closeAfter]: after === 0,
@@ -46,6 +57,7 @@ export const BeforeAfter = () => {
 					className={classNames(style.afterContent, {
 						[style.afterActive]: after === 100,
 					})}>
+					<BeforeAfterMenu menuData={AfterMenu} />
 					<button
 						className={style.buttonAfter}
 						onClick={() => {
@@ -57,9 +69,9 @@ export const BeforeAfter = () => {
 						}}>
 						Back
 					</button>
-					<BeforeAfterMenu menuData={AfterMenu} />
 				</div>
 			</div>
+			{/* end after */}
 		</div>
 	);
 };
